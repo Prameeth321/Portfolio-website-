@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: swung note;
+            margin: 0;
+            padding: 0;
+            background-color: #222222;
+            color: white;
+            letter-spacing: 1.5px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust to the number of columns you want */
+            gap: 20px;
+    }
+    .gal {
+            display: grid;
+            grid-template-columns: repeat(1,1fr); /* Adjust to the number of columns you want */
+            gap: 20px;
+    }
+    .gal img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .image-container {
+            position: relative;
+        }
+        .image-title {
+            position:relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .image-title p {
+            margin:0;
+            font-size: 14px;
+            color: white;
+        }
+        .image-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-image {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 5px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="gall">
+            <img src="logo.png" alt="logo" width="40px" height="40px">
+        </div>
+    </div> -->
+
+    <div class="container">
+        <h1>My Works</h1>
+        <div class="gallery">
+            <div class="image-container">
+                <img src="Anirudh ravichander.png" alt="Arjun Reddy" onclick="openImage('Anirudh ravichander.png')">
+                <div class="image-title"><p>Rockstar</p></div>
+            </div>
+            <div class="image-container">
+                <img src="gradient.png" alt="Arjun Reddy" onclick="openImage('gradient.png')">
+                <div class="image-title"><p>Go</p></div>
+            </div>
+            <div class="image-container">
+                <img src="left.hndrrb.png" alt="Arjun Reddy" onclick="openImage('left.hndrrb.png')">
+                <div class="image-title"><p>lefthndr</p></div>
+            </div>
+            <div class="image-container">
+                <img src="jersey instagram-02.jpg" alt="Arjun Reddy" onclick="openImage('jersey instagram-02.jpg')">
+                <div class="image-title"><p>Jersey</p></div>
+            </div>
+            <div class="image-container">
+                <img src="STONE.png" alt="Arjun Reddy" onclick="openImage('STONE.png')">
+                <div class="image-title"><p>Stone</p></div>
+            </div>
+            <div class="image-container">
+                <img src="lefthander red-03.jpg"Arjun Reddy" onclick="openImage('lefthander red-03.jpg')">
+                <div class="image-title"><p>Negative Space</p></div>
+            </div>
+        </div>
+        <div class="gal">
+            <div class="image-container">
+                <img src="lhwp.png"Arjun Reddy" onclick="openImage('lhwp.png')">
+                <div class="image-title"><p>LHWP</p></div>
+            </div>
+            <div class="image-container">
+                <img src="sea1.png"Arjun Reddy" onclick="openImage('sea1.png')">
+                <div class="image-title"><p>Sea</p></div>
+            </div>
+            <div class="image-container">
+                <img src="rhwp.png"Arjun Reddy" onclick="openImage('rhwp.png')">
+                <div class="image-title"><p>RHWP</p></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="image-popup" id="imagePopup" onclick="closeImage()">
+        <img id="popupImage" class="popup-image" src="" alt="">
+        <span class="close-btn" onclick="closeImage()">&times;</span>
+    </div>
+
+    <script>
+        function openImage(src) {
+            document.getElementById('popupImage').src = src;
+            document.getElementById('imagePopup').style.display = 'flex';
+        }
+
+        function closeImage() {
+            document.getElementById('imagePopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
